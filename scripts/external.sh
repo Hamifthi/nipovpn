@@ -50,7 +50,7 @@ function fncSetupExternalShadowsocks {
 		server_port: $_INTERNAL_VPN_PORT
 		password: $_pass
 		method: chacha20-ietf-poly1305
-		plugin_opts: obfs=http;obfs-host=www.google.com
+		plugin_opts: obfs=tls;obfs-host=www.google.com
 	"
 }
 # End of Function fncSetupExternalShadowsocks

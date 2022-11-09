@@ -33,7 +33,7 @@ function fncExitErr {
 function fncCheckSSH {
 	local ip="$1"
 	local port="$2"
-	ssh -q -o BatchMode=yes  -o StrictHostKeyChecking=no "$ip" -p "$port" 'exit 0'
+	ssh -q -o BatchMode=yes  -o StrictHostKeyChecking=no root@"$ip" -p "$port" 'exit 0'
 	local rcode=$?
 	if [[ "$rcode" != "0" ]]; then
 		fncExitErr "SSH connectivity is not OK with user root to IP $ip and port $port"
